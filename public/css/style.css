@@ -59,7 +59,6 @@
   flex-wrap: wrap;
   align-items: center;
   counter-reset: section;
-  /* opacity: 0.9999; */
   position: relative;
   z-index: 100;
 }
@@ -83,11 +82,11 @@
 
 .brief-list__content {
   position: relative;
+  z-index: 1;
   display: block;
   height: 100%;
   cursor: pointer;
-
-  z-index: 10;
+  overflow: hidden;
 }
 
 .brief-list__content::after {
@@ -106,7 +105,6 @@
   opacity: 0.7;
   color: #ececec;
   z-index: -1;
-  /* overflow: hidden; */
 }
 
 .brief-list__content--1::before {
