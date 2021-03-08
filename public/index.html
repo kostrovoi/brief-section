@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,40 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>brief-section</title>
 </head>
+
 <body>
   <section class="brief-section">
-    <p class="section-count">01</p>
-    <h2 class="brief-title">Выберите тип проекта</h2>
-    <ul class="brief-list">
-      <li class="brief-list-item"><a href="#" class="brief-list-item__content"></a></li>
-      <li class="brief-list-item"><a href="#" class="brief-list-item__content"></a></li>
-      <li class="brief-list-item"><a href="#" class="brief-list-item__content"></a></li>
-      <li class="brief-list-item"><a href="#" class="brief-list-item__content"></a></li>
-      <li class="brief-list-item"><a href="#" class="brief-list-item__content"></a></li>
-      <li class="brief-list-item"><button></button></li>
-
-    </ul>
+    <div class="wrapper">
+      <span class="brief-section__count">01</span>
+      <h2 class="brief-title">Выберите <span class="brief-title__bold">тип проекта</span></h2>
+      <div class="brief-list-wrapper">
+        <ol class="brief-list">
+          <li class="brief-list__item"><a href="#" class="brief-list__content brief-list__content--1">заполнить</a></li>
+          <li class="brief-list__item"><a href="#" class="brief-list__content brief-list__content--2">
+            <span>бриф</span>
+            <h3>Сайт под ключ</h3>
+          </a></li>
+          <li class="brief-list__item"><a href="#" class="brief-list__content brief-list__content--3">
+            <span>бриф</span>
+            <h3>Логотип</h3>
+          </a></li>
+          <li class="brief-list__item"><a href="#" class="brief-list__content brief-list__content--4">
+            <span>бриф</span>
+            <h3>Дизайн приложения</h3>
+          </a></li>
+          <li class="brief-list__item"><a href="#" class="brief-list__content brief-list__content--5">
+            <span>бриф</span>
+            <h3>Приложение под ключ</h3>
+          </a></li>
+          <li class="brief-list__item"><button class="cta-btn btn-reset">
+            <span>ничего не нашли?</span>
+            <h3>Создайте свой бриф!</h3>
+          </button></li>
+        </ol>
+      </div>
+    </div>
   </section>
   <script src="./js/script.js"></script>
 </body>
+
 </html>
