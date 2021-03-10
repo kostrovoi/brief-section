@@ -1,6 +1,7 @@
 @import '_normalize.css';
 @import '_fonts.css';
 @import '_global.css';
+@import '_first_interactive_block.css';
 
 /* overall start---------------*/
 .btn-reset {
@@ -125,6 +126,15 @@
   left: 24px;
   top: 24px;
   background-image: url('../img/brief-list-icon-2.svg');
+  transition: 0.15s ease-out;
+}
+
+.brief-list__content--2:hover::before {
+  color: #333333;
+  fill: #333;
+  stroke: #333;
+  transform: scale(1.2);
+  transition: 0.15s ease-out;
 }
 
 .brief-list__content--3::before {
@@ -157,7 +167,7 @@
   background-image: url('../img/brief-list-icon-5.svg');
 }
 
-.brief-list__content--1 span {
+.brief-list__content--1 .span-0 {
   position: relative;
   padding: 22px 34px;
   top: 147px;
@@ -174,10 +184,10 @@
   background-color: #fff;
 }
 
-.brief-list__content--2 span,
-.brief-list__content--3 span,
-.brief-list__content--4 span,
-.brief-list__content--5 span {
+.brief-list__content--2 .span-1,
+.brief-list__content--3 .span-1,
+.brief-list__content--4 .span-1,
+.brief-list__content--5 .span-1 {
   position: relative;
   top: 102px;
   margin-left: 32px;
@@ -190,13 +200,14 @@
   color: #333333;
   opacity: 0.5;
 }
-.brief-list__content--2 h3,
-.brief-list__content--3 h3,
-.brief-list__content--4 h3,
-.brief-list__content--5 h3 {
+.brief-list__content--2 .span-2,
+.brief-list__content--3 .span-2,
+.brief-list__content--4 .span-2,
+.brief-list__content--5 .span-2 {
   position: relative;
   top: 146px;
-  margin-left: 32px;
+  left: 32px;
+  margin-left: -69px;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -208,7 +219,7 @@
   text-align: left;
 }
 
-.cta-btn span {
+.cta-btn .span-1 {
   position: relative;
   bottom: 16px;
   margin-left: 49px;
@@ -221,10 +232,11 @@
   color: #ffffff;
 }
 
-.cta-btn h3 {
+.cta-btn .span-2 {
   position: relative;
   top: 25px;
-  margin-left: 49px;
+  left: 49px;
+  margin-left: -170px;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
