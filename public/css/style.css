@@ -94,8 +94,10 @@
 
 .brief-list__content:hover {
   background-color: #1b91e3;
-  color: #fff;   /*---------------------------------------------- cascade*/
   transition: background-color 0.2s ease-out;
+}
+.brief-list__content:hover span {
+  visibility: hidden;
 }
 
 .brief-list__content::after {
@@ -257,11 +259,6 @@
   transition: background-color 0.2s ease-out;
 }
 
-.cta-btn:hover {
-  color: #333; /*--------------------------- cascade*/
-  background-color: #f9f9f9;
-  transition: background-color 0.2s ease-out;
-}
 
 .cta-btn .span-1 {
   position: relative;
@@ -287,3 +284,15 @@
   line-height: 1.2;
   color: #ffffff;
 }
+
+.cta-btn:hover {
+  color: #333; /*--------------------------------cascade*/
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-out;
+}
+
+.cta-btn:hover .span-1,
+.cta-btn:hover .span-2 {
+  color: #333;
+}
+
