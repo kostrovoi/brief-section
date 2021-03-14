@@ -148,13 +148,52 @@
   height: 25px;
   left: 24px;
   top: 24px;
-  /* fill: #1b91e3; */
-  /* stroke: #1B91E3; */
   transition: 0.15s ease-out;
   will-change: transform;
 }
 
-.inner-fill-2 {
+.brief-icon-3 {
+  position: absolute;
+  width: 29px;
+  height: 30px;
+  left: 24px;
+  top: 24px;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.brief-icon-4 {
+  position: absolute;
+  width: 23px;
+  height: 38px;
+  left: 24px;
+  top: 24px;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.brief-icon-5 {
+  position: absolute;
+  width: 23px;
+  height: 33px;
+  left: 24px;
+  top: 24px;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.outer-2,
+.outer-3,
+.outer-4,
+.outer-5 {
+  /* fill: rgba(255, 255, 255, 0); */
+  fill: none;
+}
+
+.inner-fill-2,
+.inner-fill-3,
+.inner-fill-4,
+.inner-fill-5 {
   fill: #1b91e3;
 }
 
@@ -162,17 +201,24 @@
   stroke: #1b91e3;
 }
 
-.brief-list__content--2:hover .inner-fill-2 {
+.brief-list__content--2:hover .brief-icon-2,
+.brief-list__content--3:hover .brief-icon-3,
+.brief-list__content--4:hover .brief-icon-4,
+.brief-list__content--5:hover .brief-icon-5 {
+  transform: scale(1.2);
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.brief-list__content--2:hover .inner-fill-2,
+.brief-list__content--3:hover .inner-fill-3,
+.brief-list__content--4:hover .inner-fill-4,
+.brief-list__content--5:hover .inner-fill-5 {
   fill: #fff;
 }
 
 .brief-list__content--2:hover .inner-stroke-2 {
   stroke: #fff;
-}
-
-.brief-list__content--2 .outer-2,
-.brief-list__content--2:hover .outer-2 {
-  fill: #fff;
 }
 
 /* svg ends----------------------------------------------------------------------- */
