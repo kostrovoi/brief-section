@@ -66,9 +66,11 @@
 
 .brief-list__item {
   margin: 12px;
+  list-style: none;
 }
 
 .brief-list__content {
+  text-decoration: none;
   position: relative;
   z-index: 1;
   display: block;
