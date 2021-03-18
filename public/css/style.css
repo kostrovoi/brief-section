@@ -66,6 +66,8 @@
 }
 
 .brief-list__item {
+  padding: 0;
+  margin-left: 0;
   margin: 12px;
   list-style: none;
 }
