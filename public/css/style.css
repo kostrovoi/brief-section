@@ -13,7 +13,7 @@
 /* overall ends---------------*/
 
 /* components starts---------------- */
-.brief-section {
+.section {
   /* font-family: 'Montserrat', sans-serif; */
   color: #333;
   padding-top: 102px;
@@ -26,7 +26,7 @@
   margin: 0 auto;
 }
 
-.brief-section__count {
+.section__count {
   font-style: normal;
   font-weight: bold;
   font-size: 10px;
@@ -38,7 +38,7 @@
   margin-left: 64px;
 }
 
-.brief-title {
+.title {
   font-style: normal;
   font-weight: 300;
   font-size: 48px;
@@ -47,11 +47,11 @@
   margin-bottom: 95px;
 }
 
-.brief-title__bold {
+.title__bold {
   font-weight: 800;
 }
 
-.brief-list-wrapper {
+.brief-wrapper {
   max-width: 1336px;
   margin: 0 auto;
 }
@@ -228,11 +228,11 @@
 
 /* svg ends----------------------------------------------------------------------- */
 
-.brief-list__content--1 .span-1,
-.brief-list__content--2 .span-1,
-.brief-list__content--3 .span-1,
-.brief-list__content--4 .span-1,
-.brief-list__content--5 .span-1 {
+.brief-list__content--1 .brief-subtitle,
+.brief-list__content--2 .brief-subtitle,
+.brief-list__content--3 .brief-subtitle,
+.brief-list__content--4 .brief-subtitle,
+.brief-list__content--5 .brief-subtitle {
   position: relative;
   top: 102px;
   margin-left: 32px;
@@ -246,11 +246,11 @@
   opacity: 0.5;
 }
 
-.brief-list__content--1 .span-2,
-.brief-list__content--2 .span-2,
-.brief-list__content--3 .span-2,
-.brief-list__content--4 .span-2,
-.brief-list__content--5 .span-2 {
+.brief-list__content--1 .brief-title,
+.brief-list__content--2 .brief-title,
+.brief-list__content--3 .brief-title,
+.brief-list__content--4 .brief-title,
+.brief-list__content--5 .brief-title {
   position: relative;
   top: 146px;
   left: 32px;
@@ -270,7 +270,7 @@
   transition: background-color 0.2s ease-out;
 }
 
-.cta-btn .span-1 {
+.cta-btn .brief-subtitle {
   position: relative;
   bottom: 16px;
   margin-left: 49px;
@@ -283,7 +283,7 @@
   color: #ffffff;
 }
 
-.cta-btn .span-2 {
+.cta-btn .brief-title {
   position: relative;
   top: 25px;
   left: 49px;
@@ -301,7 +301,7 @@
   transition: background-color 0.2s ease-out;
 }
 
-.cta-btn:hover .span-1,
-.cta-btn:hover .span-2 {
+.cta-btn:hover .brief-subtitle,
+.cta-btn:hover .brief-title {
   color: #333;
 }
