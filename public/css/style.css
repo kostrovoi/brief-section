@@ -1,7 +1,7 @@
-@import '_normalize.css';
-@import '_fonts.css';
-@import '_global.css';
-@import '_first_interactive_block.css';
+@import 'normalize.css';
+@import 'fonts.css';
+@import 'global.css';
+@import 'first_interactive_block.css';
 
 /* overall starts---------------*/
 .btn-reset {
@@ -14,7 +14,7 @@
 
 /* components starts---------------- */
 .brief-section {
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   color: #333;
   padding-top: 102px;
   padding-bottom: 102px;
@@ -66,14 +66,14 @@
 }
 
 .brief-list__item {
-  padding: 0;
-  margin-left: 0;
+  /* padding: 0; */
+  /* margin-left: 0; */
   margin: 12px;
-  list-style: none;
+  /* list-style: none; */
 }
 
 .brief-list__content {
-  text-decoration: none;
+  /* text-decoration: none; */
   position: relative;
   z-index: 1;
   display: block;
