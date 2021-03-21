@@ -14,7 +14,6 @@
 
 /* components starts---------------- */
 .section {
-  /* font-family: 'Montserrat', sans-serif; */
   color: #333;
   padding-top: 102px;
   padding-bottom: 102px;
@@ -60,20 +59,23 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  /* justify-content: center; */
   counter-reset: section;
   position: relative;
   z-index: 100;
 }
 
+@media (max-width: 1347px) {
+  .brief-list {
+    justify-content: center;
+  }
+}
+
 .brief-list__item {
-  /* padding: 0; */
-  /* margin-left: 0; */
   margin: 12px;
-  /* list-style: none; */
 }
 
 .brief-list__content {
-  /* text-decoration: none; */
   position: relative;
   z-index: 1;
   display: block;
