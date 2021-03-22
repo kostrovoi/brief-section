@@ -358,7 +358,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 370px) {
   .section__count {
     margin-left: 15px;
     margin-right: auto;
