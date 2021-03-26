@@ -1,7 +1,7 @@
 @import 'normalize.css';
 @import 'fonts.css';
 @import 'global.css';
-@import 'first_interactive_block.css';
+@import 'step_one_section.css';
 
 /* overall starts---------------*/
 .btn-reset {
@@ -64,10 +64,8 @@
   align-items: center;
   counter-reset: section;
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
-
-
 
 .brief-list__item {
   margin: 12px;
@@ -228,14 +226,7 @@
 
 /* svg ends----------------------------------------------------------------------- */
 
-.brief-list__content--1 .brief-subtitle,
-.brief-list__content--2 .brief-subtitle,
-.brief-list__content--3 .brief-subtitle,
-.brief-list__content--4 .brief-subtitle,
-.brief-list__content--5 .brief-subtitle {
-  position: relative;
-  top: 102px;
-  margin-left: 32px;
+.brief-subtitle {
   font-style: normal;
   font-weight: bold;
   font-size: 10px;
@@ -244,6 +235,16 @@
   text-transform: uppercase;
   color: #333333;
   opacity: 0.5;
+}
+
+.brief-list__content--1 .brief-subtitle,
+.brief-list__content--2 .brief-subtitle,
+.brief-list__content--3 .brief-subtitle,
+.brief-list__content--4 .brief-subtitle,
+.brief-list__content--5 .brief-subtitle {
+  position: relative;
+  top: 102px;
+  margin-left: 32px;
 }
 
 .brief-list__content--1 .brief-title,
@@ -281,6 +282,7 @@
   letter-spacing: 0.2px;
   text-transform: uppercase;
   color: #ffffff;
+  opacity: 1;
 }
 
 .cta-btn .brief-title {

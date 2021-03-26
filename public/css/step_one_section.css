@@ -1,0 +1,161 @@
+:root {
+  --inner-fill-step-one-icons: #1b91e3;
+  --inner-stroke-step-one-icons: #1b91e3;
+}
+
+.step-one {
+  background-color: aquamarine;
+}
+
+.progress-bar {
+  margin-top: -35px;
+  margin-left: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.left-arrow {
+  width: 9px;
+  height: 14px;
+}
+
+.progress-bar__steps {
+  margin-left: 18px;
+  margin-right: 10px;
+}
+
+.scale {
+  width: 882px;
+  height: 4px;
+  background-color: #ebebeb;
+  border-radius: 24px;
+}
+
+.progress {
+  height: 4px;
+  width: calc(100% / 5);
+  background-color: #1b91e3;
+}
+
+.nav__step-one {
+  display: inline-block;
+  width: 234px;
+  margin-left: auto;
+  z-index: 20;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav-item {
+  margin-bottom: 30px;
+}
+
+.brief-subtitle.subtitle--active {
+  opacity: 1;
+}
+
+.step-one-wrapper {
+  width: 1105px;
+  margin-left: 64px;
+  margin-top: -125px;
+}
+
+.step-one-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  position: relative;
+  z-index: 10;
+}
+
+.step-one__content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  width: 309px;
+  min-height: 304px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-out;
+}
+
+.step-one__content:hover {
+  background-color: #1b91e3;
+  transition: background-color 0.2s ease-out;
+}
+.step-one__content:hover span {
+  color: #fff;
+  opacity: 1;
+}
+
+.step-one__content .brief-subtitle {
+  position: relative;
+  top: 102px;
+  margin-left: 32px;
+}
+
+.step-one__content .brief-title {
+  position: relative;
+  top: 146px;
+  left: 32px;
+  margin-left: -115px;
+  /* margin-right: auto; */
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.2;
+  /* text-align: left; */
+}
+
+/* svg starts ----------------------------- */
+
+.s-one-icons {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.s-one-icon-1 {
+  width: 24px;
+  height: 24px;
+  fill: none;
+}
+
+.s-one-icon-2 {
+  width: 23px;
+  height: 24px;
+  fill: none;
+}
+
+.s-one-icon-3 {
+  width: 23px;
+  height: 25px;
+  fill: none;
+}
+
+.s-one-icon-4 {
+  width: 21px;
+  height: 24px;
+  fill: none;
+}
+
+.s-one-icon-5 {
+  width: 21px;
+  height: 5px;
+  fill: none;
+}
+
+.step-one__content:hover .s-one-icons {
+  --inner-fill-step-one-icons: #fff;
+  --inner-stroke-step-one-icons: #fff;
+  transform: scale(1.2);
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
