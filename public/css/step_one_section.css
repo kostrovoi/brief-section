@@ -25,7 +25,7 @@
 
 .progress-bar {
   margin-bottom: 88px;
-  margin-left: 6px;
+  margin-left: 70px;
   display: flex;
   align-items: center;
 }
@@ -55,8 +55,8 @@
 }
 
 .nav__step-one {
+  margin-top: -87px;
   margin-left: 14px;
-  padding-top: 14px;
   /* flex-grow: 1; */
   /* max-width: 314px; */
   flex-basis: 314px;
@@ -79,14 +79,14 @@
 }
 
 .step-one-wrapper {
-display: flex;
-flex-direction: row-reverse;
-}
-
-.progress-plus-cards {
-  margin-left: 64px;
   display: flex;
   flex-direction: column;
+}
+
+.nav-plus-cards {
+  margin-left: 64px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .step-one-list {
@@ -186,17 +186,23 @@ flex-direction: row-reverse;
 }
 
 @media (max-width: 1330px) {
+  .step-one__count {
+    margin-left: 32px;
+  }
   .title-step-1 {
+    margin-left: 32px;
     margin-bottom: 30px;
   }
   .progress-bar {
+    margin-left: 35px;
     margin-bottom: 35px;
     margin-right: 15px;
   }
-  .progress-plus-cards {
+  .nav-plus-cards {
     margin-left: 32px;
   }
   .nav__step-one {
+    margin-top: -34px;
     flex-basis: 234px;
   }
 }
@@ -206,15 +212,59 @@ flex-direction: row-reverse;
     justify-content: center;
   } */
   .title-step-1 {
-    margin-bottom: 0;
+    margin-bottom: 20;
   }
-  .step-one-wrapper {
+  .nav-plus-cards {
     flex-direction: column;
+    margin-left: 0;
   }
   .nav__step-one {
+    margin-top: -14px;
     flex-basis: unset;
     width: 234px;
     flex-shrink: 0;
     align-self: flex-end;
+  }
+  .step-one-list {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 1050px) {
+  .step-one__count {
+    margin-left: -550px;
+  }
+  .steps-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .progress-bar {
+    margin-right: 22px;
+  }
+  .title-step-1 {
+    text-align: center;
+  }
+  .step-one-list {
+    justify-content: space-evenly;
+  }
+  .step-one-list:last-child {
+    align-self: flex-start;
+    align-content: flex-start;
+  }
+  .brief-list__item:last-child {
+    align-self: flex-start;
+    align-content: flex-start;
+  }
+}
+
+@media (max-width: 682px) {
+  .step-one__count {
+    margin-left: -235px;
+  }
+  .title-step-1 {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
   }
 }
