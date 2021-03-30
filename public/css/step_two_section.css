@@ -1,7 +1,3 @@
-/* .step-two {
-  background-color: aquamarine;
-} */
-
 .nav-plus-cards__step-2 {
   justify-content: space-between;
 }
@@ -46,7 +42,7 @@
   height: 20px;
 }
 
-.checked-1 {
+.checked-visible {
   visibility: visible;
 }
 
