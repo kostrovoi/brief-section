@@ -5,12 +5,13 @@
 @import 'step_two_section.css';
 @import 'step_three_section.css';
 @import 'step_four_section.css';
+@import 'step_five_section.css';
 
 /* overall starts---------------*/
 .btn-reset {
   padding: 0;
   border: none;
-  background-color: transparent;
+  /* background-color: transparent; */
   cursor: pointer;
 }
 /* overall ends---------------*/

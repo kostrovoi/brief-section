@@ -49,11 +49,13 @@
 .nav-link-span {
   padding-left: 22px;
   padding-right: 22px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   /* display: inline-block; */
 }
 
 .nav-link:hover > .nav-link-span {
-  transform: scale(1.2) skewX(-10deg);
+  transform: scale(1.1) skewX(-20deg);
   transition: all 0.12s ease-out;
 }
 

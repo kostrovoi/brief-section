@@ -1,0 +1,152 @@
+.step-five {
+  background-color: aquamarine;
+}
+
+.progress--step-five {
+  width: calc(100% * 5 / 5);
+}
+
+/*  */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 976px;
+  flex-grow: 1;
+}
+
+.userContacts {
+  /* flex-grow: 1; */
+  /* max-width: 976px; */
+  /* margin-left: 25px; */
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  margin-bottom: 93px;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+}
+
+/*  */
+
+.userName {
+  flex-basis: 462px;
+  max-width: 462px;
+  flex-grow: 1;
+
+  border: none;
+  appearance: none;
+  border-bottom: 1px solid #1b91e3;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.userName.subtitle--active::placeholder {
+  opacity: 1;
+}
+
+.userTel {
+  flex-basis: 462px;
+  max-width: 462px;
+
+  flex-grow: 1;
+
+  border: none;
+  appearance: none;
+  border-bottom: 1px solid #c4c4c4;
+  /* opacity: 0.5; */
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.userDescript {
+  margin-bottom: 80px;
+  flex-grow: 1;
+
+  border: none;
+  appearance: none;
+  border-bottom: 1px solid #c4c4c4;
+  /* opacity: 0.5; */
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #333333;
+  opacity: 1;
+}
+
+.file-input-wrapper {
+  margin-bottom: 56px;
+}
+
+/* input[type="file"] {
+  border: none;
+  appearance: none;
+} */
+
+.addFile {
+  /* add roboto ?  */
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #333333;
+}
+
+.addFile-limit {
+  color: #999;
+}
+
+.agreements-wrapper {
+  margin-bottom: 80px;
+}
+
+.agreements-link {
+  text-decoration: underline;
+}
+
+.agreements-label {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.submit {
+  width: 200px;
+  height: 56px;
+  background-color: #1b91e3;
+  border-radius: 3px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

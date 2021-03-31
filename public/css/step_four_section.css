@@ -1,9 +1,10 @@
-/* .step-four {
-  background-color: aquamarine;
-} */
 
 .progress--step-four {
   width: calc(100% * 4 / 5);
+}
+
+.nav__step-one--step-four {
+  margin-left: 50px;
 }
 
 .brief-title.brief-title--step-4 {
@@ -26,4 +27,10 @@
   width: 26px;
   height: 26px;
   fill: none;
+}
+
+@media (max-width: 1450px) {
+  .nav__step-one {
+    flex-basis: 200px;
+  }
 }
