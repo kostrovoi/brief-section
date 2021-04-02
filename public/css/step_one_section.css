@@ -98,6 +98,7 @@
 }
 
 .step-one__content {
+  padding-left: 32px;
   position: relative;
   z-index: 1;
   display: block;
@@ -119,16 +120,12 @@
 }
 
 .step-one__content .brief-subtitle {
-  position: relative;
-  top: 102px;
-  margin-left: 32px;
+  display: block;
+  margin-top: 118px;
+  margin-bottom: 34px;
 }
 
 .step-one__content .brief-title {
-  position: relative;
-  top: 146px;
-  left: 32px;
-  margin-left: -115px;
   /* margin-right: auto; */
   font-style: normal;
   font-weight: 800;

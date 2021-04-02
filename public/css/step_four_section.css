@@ -7,10 +7,6 @@
   margin-left: 50px;
 }
 
-.brief-title.brief-title--step-4 {
-  margin-left: -72px;
-}
-
 .s-four-icon-1 {
   width: 17px;
   height: 30px;
@@ -29,8 +25,8 @@
   fill: none;
 }
 
-@media (max-width: 1450px) {
-  .nav__step-one {
-    flex-basis: 200px;
+@media (max-width: 1350px) {
+  .nav__step-one--step-two {
+    flex-basis: 170px;
   }
 }

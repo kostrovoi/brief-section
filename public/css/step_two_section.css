@@ -14,10 +14,6 @@
   transition: all 0.15s ease-out;
 }
 
-.brief-title.brief-title__step-2 {
-  margin-left: -111px;
-}
-
 .s-two-icon-1 {
   width: 32px;
   height: 29px;
@@ -30,7 +26,7 @@
   fill: none;
 }
 
-.nav__step-one.nav__step-one--step-two {
+.nav__step-one--step-two {
   flex-basis: 214px;
 }
 

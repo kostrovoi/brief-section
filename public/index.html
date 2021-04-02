@@ -86,6 +86,16 @@
       <path fill="var(--inner-fill-step-one-icons)"
         d="M25.188 10.291H.813a.813.813 0 010-1.625h24.375a.813.813 0 010 1.625zM6.229 6.5a.813.813 0 01-.813-.813V.813a.813.813 0 011.625 0v4.875a.813.813 0 01-.812.813zM19.771 6.5a.813.813 0 01-.812-.813V.813a.813.813 0 011.625 0v4.875a.813.813 0 01-.813.813zM9.807 16.85c.614.1 1.084.33 1.41.69.327.353.49.793.49 1.32 0 .407-.106.783-.32 1.13-.213.34-.54.613-.98.82-.433.207-.966.31-1.6.31-.493 0-.98-.063-1.46-.19a3.829 3.829 0 01-1.21-.56l.63-1.24c.267.2.574.357.92.47.354.107.714.16 1.08.16.407 0 .727-.077.96-.23a.767.767 0 00.35-.67c0-.573-.436-.86-1.31-.86h-.74v-1.07l1.44-1.63h-2.98V14h4.9v1.05l-1.58 1.8zm6.648 4.27c-.58 0-1.096-.143-1.55-.43-.453-.287-.81-.7-1.07-1.24-.253-.547-.38-1.197-.38-1.95 0-.753.127-1.4.38-1.94.26-.547.617-.963 1.07-1.25.454-.287.97-.43 1.55-.43.58 0 1.097.143 1.55.43.454.287.807.703 1.06 1.25.26.54.39 1.187.39 1.94 0 .753-.13 1.403-.39 1.95-.253.54-.606.953-1.06 1.24-.453.287-.97.43-1.55.43zm0-1.37c.427 0 .76-.183 1-.55.247-.367.37-.933.37-1.7 0-.767-.123-1.333-.37-1.7-.24-.367-.573-.55-1-.55-.42 0-.753.183-1 .55-.24.367-.36.933-.36 1.7 0 .767.12 1.333.36 1.7.247.367.58.55 1 .55z" />
     </symbol>
+    <symbol id="attachment-file" fill="none" viewBox="0 0 16 16">
+      <g clip-path="url(#clip0)">
+        <path fill="#333" d="M4.37 16a3.983 3.983 0 01-2.837-1.171A3.985 3.985 0 01.36 11.99c0-1.074.416-2.082 1.172-2.837L9.83.856C11.02-.331 12.864-.278 14.123.98c1.259 1.26 1.313 3.104.126 4.292l-7.797 7.796a1.88 1.88 0 01-2.656 0 1.881 1.881 0 010-2.657l5.28-5.281a.456.456 0 11.645.645l-5.28 5.28a.968.968 0 000 1.368.969.969 0 001.366 0l7.797-7.796c.819-.82.765-2.11-.126-3.002-.892-.891-2.182-.945-3.002-.126L2.177 9.8a3.078 3.078 0 00-.904 2.191c0 .831.322 1.61.904 2.193a3.078 3.078 0 002.193.904c.83 0 1.61-.321 2.192-.904l8.299-8.299a.456.456 0 11.645.645L7.207 14.83A3.984 3.984 0 014.37 16z"/>
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <path fill="#fff" d="M0 0h16v16H0z"/>
+        </clipPath>
+      </defs>
+    </symbol>
   </svg>
 
   <section class="section">
@@ -371,7 +381,7 @@
           </div>
         </div>
         <div class="nav-plus-cards nav-plus-cards__step-2">
-          <nav class="nav__step-one nav__step-one--step-four">
+          <nav class="nav__step-one nav__step-one--step-four nav__step-one--step-two">
             <ul class="nav-list">
               <li class="nav-item brief-subtitle subtitle--active"><a href="#" class="nav-link">
                   <svg class="checked checked-visible">
@@ -477,16 +487,19 @@
           </nav>
           <form class="form" action="/" method="post" enctype="multipart/form-data">
             <div class="userContacts">
-              <input class="userName subtitle--active" type="text" name="username" id="username" placeholder="Кирилл Иванов" required>
-              <input class="userTel" type="tel" name="phone-number" id="phone-number" placeholder="+7 (___) ___-__-__" required>
+              <input class="userName contains-placeholder" type="text" name="username" id="username" placeholder="Кирилл Иванов" required>
+              <input class="userTel contains-placeholder" type="tel" name="phone-number" id="phone-number" placeholder="+7 (___) ___-__-__" required>
             </div>
 
             <div class="userData">
 
-              <textarea class="userDescript" name="comment" id="comment" cols="30" rows="1"
+              <textarea class="userDescript contains-placeholder" name="comment" id="comment" cols="30" rows="1"
                 placeholder="Опишите ваш проект"></textarea>
 
               <div class="file-input-wrapper">
+                <svg class="custom-file-input">
+                  <use xlink:href="#attachment-file"></use>
+                </svg>
                 <input type="file" name="file" id="file-input">
                 <label class="addFile" for="file-input">Добавить файл <span class="addFile-limit">до 5 Mb</span></label>
               </div>

@@ -82,6 +82,7 @@
 }
 
 .brief-list__content {
+  padding-left: 32px;
   position: relative;
   z-index: 1;
   display: block;
@@ -252,9 +253,9 @@
 .brief-list__content--3 .brief-subtitle,
 .brief-list__content--4 .brief-subtitle,
 .brief-list__content--5 .brief-subtitle {
-  position: relative;
-  top: 102px;
-  margin-left: 32px;
+  display: block;
+  margin-top: 103px;
+  margin-bottom: 34px;
 }
 
 .brief-list__content--1 .brief-title,
@@ -262,10 +263,6 @@
 .brief-list__content--3 .brief-title,
 .brief-list__content--4 .brief-title,
 .brief-list__content--5 .brief-title {
-  position: relative;
-  top: 146px;
-  left: 32px;
-  margin-left: -69px;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -274,17 +271,18 @@
 }
 
 .cta-btn {
+  padding-left: 49px;
+  text-align: left;
   width: 309px;
   min-height: 304px;
-  text-align: left;
   background-color: #1b91e3;
   transition: background-color 0.2s ease-out;
 }
 
 .cta-btn .brief-subtitle {
+  display: block;
   position: relative;
   bottom: 16px;
-  margin-left: 49px;
   font-style: normal;
   font-weight: 700;
   font-size: 10px;
@@ -297,9 +295,7 @@
 
 .cta-btn .brief-title {
   position: relative;
-  top: 25px;
-  left: 49px;
-  margin-left: -170px;
+  top: 15px;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;

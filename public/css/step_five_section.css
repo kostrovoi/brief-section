@@ -50,8 +50,9 @@
   color: #333333;
 }
 
-.userName.subtitle--active::placeholder {
+.contains-placeholder::placeholder {
   opacity: 1;
+  color: #333333;
 }
 
 .userTel {
@@ -96,16 +97,28 @@
 }
 
 .file-input-wrapper {
+  display: flex;
+  position: relative;
   margin-bottom: 56px;
 }
 
-/* input[type="file"] {
+.custom-file-input {
+  width: 16px;
+  height: 16px;
+}
+
+input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
   border: none;
   appearance: none;
-} */
+  opacity: 0;
+}
 
 .addFile {
   /* add roboto ?  */
+  margin-left: 16px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -120,7 +133,14 @@
 }
 
 .agreements-wrapper {
+  display: flex;
+  align-items: center;
   margin-bottom: 80px;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
 }
 
 .agreements-link {
@@ -128,6 +148,7 @@
 }
 
 .agreements-label {
+  margin-left: 16px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
