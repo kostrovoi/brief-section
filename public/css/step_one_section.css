@@ -1,11 +1,3 @@
-:root {
-  --inner-fill-step-one-icons: #1b91e3;
-  --inner-stroke-step-one-icons: #1b91e3;
-}
-
-/* .step-one {
-  background-color: aquamarine;
-} */
 
 .steps-wrapper {
   max-width: 1440px;

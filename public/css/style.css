@@ -7,6 +7,11 @@
 @import 'step_four_section.css';
 @import 'step_five_section.css';
 
+:root {
+  --inner-fill-step-one-icons: #1b91e3;
+  --inner-stroke-step-one-icons: #1b91e3;
+}
+
 /* overall starts---------------*/
 .btn-reset {
   padding: 0;
