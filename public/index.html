@@ -88,19 +88,20 @@
     </symbol>
     <symbol id="attachment-file" fill="none" viewBox="0 0 16 16">
       <g clip-path="url(#clip0)">
-        <path fill="#333" d="M4.37 16a3.983 3.983 0 01-2.837-1.171A3.985 3.985 0 01.36 11.99c0-1.074.416-2.082 1.172-2.837L9.83.856C11.02-.331 12.864-.278 14.123.98c1.259 1.26 1.313 3.104.126 4.292l-7.797 7.796a1.88 1.88 0 01-2.656 0 1.881 1.881 0 010-2.657l5.28-5.281a.456.456 0 11.645.645l-5.28 5.28a.968.968 0 000 1.368.969.969 0 001.366 0l7.797-7.796c.819-.82.765-2.11-.126-3.002-.892-.891-2.182-.945-3.002-.126L2.177 9.8a3.078 3.078 0 00-.904 2.191c0 .831.322 1.61.904 2.193a3.078 3.078 0 002.193.904c.83 0 1.61-.321 2.192-.904l8.299-8.299a.456.456 0 11.645.645L7.207 14.83A3.984 3.984 0 014.37 16z"/>
+        <path fill="#333"
+          d="M4.37 16a3.983 3.983 0 01-2.837-1.171A3.985 3.985 0 01.36 11.99c0-1.074.416-2.082 1.172-2.837L9.83.856C11.02-.331 12.864-.278 14.123.98c1.259 1.26 1.313 3.104.126 4.292l-7.797 7.796a1.88 1.88 0 01-2.656 0 1.881 1.881 0 010-2.657l5.28-5.281a.456.456 0 11.645.645l-5.28 5.28a.968.968 0 000 1.368.969.969 0 001.366 0l7.797-7.796c.819-.82.765-2.11-.126-3.002-.892-.891-2.182-.945-3.002-.126L2.177 9.8a3.078 3.078 0 00-.904 2.191c0 .831.322 1.61.904 2.193a3.078 3.078 0 002.193.904c.83 0 1.61-.321 2.192-.904l8.299-8.299a.456.456 0 11.645.645L7.207 14.83A3.984 3.984 0 014.37 16z" />
       </g>
       <defs>
         <clipPath id="clip0">
-          <path fill="#fff" d="M0 0h16v16H0z"/>
+          <path fill="#fff" d="M0 0h16v16H0z" />
         </clipPath>
       </defs>
     </symbol>
   </svg>
 
-    <section class="section step-one">
+  <section class="section step-one">
     <div class="steps-wrapper">
-      <span class="count step-one__count">01</span>
+      <span class="count step-one__count">0<span class="stepsCount"></span></span>
       <h2 class="title title-step-1">Выберите <span class="title__bold">тип проекта</span></h2>
 
       <div class="step-one-wrapper">
@@ -108,21 +109,43 @@
           <svg class="left-arrow">
             <use xlink:href="#progress-bar-arrow"></use>
           </svg>
-          <span class="progress-bar__steps brief-subtitle subtitle--active">Шаг 1 из 5</span>
+          <span class="progress-bar__steps brief-subtitle subtitle--active">Шаг <span class="stepsCount"></span> из
+            5</span>
           <div class="scale">
             <div class="progress"></div>
           </div>
         </div>
-        <div class="nav-plus-cards">
-          <nav class="nav__step-one">
+        <div class="nav-plus-cards nav-plus-cards__step-2">
+          <nav class="nav__step-one nav__step-one--step-two">
             <ul class="nav-list">
-              <li class="nav-item brief-subtitle subtitle--active"><a href="#" class="nav-link">Тип</a></li>
-              <li class="nav-item brief-subtitle"><a href="#" class="nav-link">платформа</a></li>
-              <li class="nav-item brief-subtitle"><a href="#" class="nav-link">Состояние</a></li>
-              <li class="nav-item brief-subtitle"><a href="#" class="nav-link">старт</a></li>
-              <li class="nav-item brief-subtitle"><a href="#" class="nav-link">Ваши контакты</a></li>
+              <li class="navItem nav-item brief-subtitle subtitle--active"><a href="#" class="nav-link">
+                  <svg class="navItemChecked checked">
+                    <use xlink:href="#checkmark"></use>
+                  </svg>
+                  <span class="nav-link-span">Тип</span></a></li>
+              <li class="navItem nav-item brief-subtitle"><a href="#" class="nav-link">
+                  <svg class="navItemChecked checked">
+                    <use xlink:href="#checkmark"></use>
+                  </svg>
+                  <span class="nav-link-span">платформа</span></a></li>
+              <li class="navItem nav-item brief-subtitle"><a href="#" class="nav-link">
+                  <svg class="navItemChecked checked">
+                    <use xlink:href="#checkmark"></use>
+                  </svg>
+                  <span class="nav-link-span">Состояние</span></a></li>
+              <li class="navItem nav-item brief-subtitle"><a href="#" class="nav-link">
+                  <svg class="navItemChecked checked">
+                    <use xlink:href="#checkmark"></use>
+                  </svg>
+                  <span class="nav-link-span">старт</span></a></li>
+              <li class="navItem nav-item brief-subtitle"><a href="#" class="nav-link">
+                  <svg class="navItemChecked checked">
+                    <use xlink:href="#checkmark"></use>
+                  </svg>
+                  <span class="nav-link-span">Ваши контакты</span></a></li>
             </ul>
           </nav>
+          <!-- step 1 -->
           <ul class="step-one-list">
             <li class="brief-list__item"><a href="#" class="step-one__content step-one__content--1">
                 <svg class="s-one-icons s-one-icon-1">
@@ -161,13 +184,109 @@
               </a></li>
 
           </ul>
+
+          <!-- step 2 -->
+          <ul class="step-one-list">
+            <li class="brief-list__item"><a href="#" class="step-one__content step-one__content--1">
+                <svg class="s-one-icons s-two-icon-1">
+                  <use xlink:href="#step-two-icon-1"></use>
+                </svg>
+                <span class="brief-subtitle">платформа</span>
+                <span class="brief-title brief-title__step-2">Адаптивный<br>сайт</span>
+              </a></li>
+            <li class="brief-list__item"><a href="#" class="step-one__content step-one__content--2">
+                <svg class="s-one-icons s-two-icon-2">
+                  <use xlink:href="#step-two-icon-2"></use>
+                </svg>
+                <span class="brief-subtitle">платформа</span>
+                <span class="brief-title brief-title__step-2">Мобильное<br>приложение</span>
+              </a></li>
+          </ul>
+
+          <!-- step 3 -->
+          <ul class="step-one-list">
+            <li class="brief-list__item"><a href="#" class="step-one__content step-one__content--1">
+                <svg class="s-one-icons s-three-icon-1">
+                  <use xlink:href="#step-three-icon-1"></use>
+                </svg>
+                <span class="brief-subtitle">Состояние</span>
+                <span class="brief-title brief-title--step-3">Новый<br>проект</span>
+              </a></li>
+            <li class="brief-list__item"><a href="#" class="step-one__content step-one__content--2">
+                <svg class="s-one-icons s-three-icon-2">
+                  <use xlink:href="#step-three-icon-2"></use>
+                </svg>
+                <span class="brief-subtitle">Состояние</span>
+                <span class="brief-title brief-title--step-3">Существующий<br>проект</span>
+              </a></li>
+          </ul>
+
+          <!-- step 4 -->
+          <ul class="step-one-list">
+            <li class="brief-list__item"><a href="#" class="step-one__content step-one__content--1">
+                <svg class="s-one-icons s-four-icon-1">
+                  <use xlink:href="#step-four-icon-1"></use>
+                </svg>
+                <span class="brief-subtitle">Старт</span>
+                <span class="brief-title brief-title--step-4">Немедленно</span>
+              </a></li>
+            <li class="brief-list__item"><a href="#" class="step-one__content step-one__content--2">
+                <svg class="s-one-icons s-four-icon-2">
+                  <use xlink:href="#step-four-icon-2"></use>
+                </svg>
+                <span class="brief-subtitle">Старт</span>
+                <span class="brief-title brief-title--step-4">В течение <br>недели</span>
+              </a></li>
+            <li class="brief-list__item"><a href="#" class="step-one__content step-one__content--2">
+                <svg class="s-one-icons s-four-icon-3">
+                  <use xlink:href="#step-four-icon-3"></use>
+                </svg>
+                <span class="brief-subtitle">Старт</span>
+                <span class="brief-title brief-title--step-4">В течение <br>месяца</span>
+              </a></li>
+          </ul>
+
+          <!-- step 5 FORM--------------- -->
+          <form class="form" action="/" method="post" enctype="multipart/form-data">
+            <div class="userContacts">
+              <input class="userName contains-placeholder" type="text" name="username" id="username"
+                placeholder="Кирилл Иванов" required>
+              <input class="userTel contains-placeholder" type="tel" name="phone-number" id="phone-number"
+                placeholder="+7 (___) ___-__-__" required>
+            </div>
+
+            <div class="userData">
+
+              <textarea class="userDescript contains-placeholder" name="comment" id="comment" cols="30" rows="1"
+                placeholder="Опишите ваш проект"></textarea>
+
+              <div class="file-input-wrapper">
+                <input class="real-file-input" type="file" name="file" id="file-input">
+                <svg class="custom-file-input">
+                  <use xlink:href="#attachment-file"></use>
+                </svg>
+                <label class="addFile" for="file-input">Добавить файл <span class="addFile-limit">до 5 Mb</span></label>
+              </div>
+
+              <div class="agreements-wrapper">
+                <input class="agreements-checkbox" type="checkbox" name="agreements" id="agreements" checked required>
+                <label class="agreements-label" for="agreements">Принимаю условия <a class="agreements-link"
+                    href="#">пользовательского&nbsp;соглашения</a> и <a class="agreements-link"
+                    href="#">политики&nbsp;конфиденциальности</a></label>
+              </div>
+
+              <button class="submit btn-reset" type="submit"><span class="submit-span">Начать проект</span></button>
+            </div>
+          </form>
         </div>
       </div>
 
     </div>
   </section>
 
-  <section class="section step-two">
+
+
+  <!-- <section class="section step-two">
     <div class="steps-wrapper">
       <span class="count step-one__count">02</span>
       <h2 class="title title-step-1">Выберите <span class="title__bold">тип проекта</span></h2>
@@ -233,9 +352,9 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
-  <section class="section step-three">
+  <!-- <section class="section step-three">
     <div class="steps-wrapper">
       <span class="count step-one__count">03</span>
       <h2 class="title title-step-1">Выберите <span class="title__bold">тип проекта</span></h2>
@@ -295,15 +414,14 @@
                 <span class="brief-subtitle">Состояние</span>
                 <span class="brief-title brief-title--step-3">Существующий<br>проект</span>
               </a></li>
-
           </ul>
         </div>
       </div>
 
     </div>
-  </section>
+  </section> -->
 
-  <section class="section step-four">
+  <!-- <section class="section step-four">
     <div class="steps-wrapper">
       <span class="count step-one__count">04</span>
       <h2 class="title title-step-1">Выберите <span class="title__bold">тип проекта</span></h2>
@@ -370,15 +488,14 @@
                 <span class="brief-subtitle">Старт</span>
                 <span class="brief-title brief-title--step-4">В течение <br>месяца</span>
               </a></li>
-
           </ul>
         </div>
       </div>
 
     </div>
-  </section>
+  </section> -->
 
-  <section class="section step-five">
+  <!-- <section class="section step-five">
     <div class="steps-wrapper">
       <span class="count step-one__count">05</span>
       <h2 class="title title-step-1">Выберите <span class="title__bold">тип проекта</span></h2>
@@ -425,8 +542,10 @@
           </nav>
           <form class="form" action="/" method="post" enctype="multipart/form-data">
             <div class="userContacts">
-              <input class="userName contains-placeholder" type="text" name="username" id="username" placeholder="Кирилл Иванов" required>
-              <input class="userTel contains-placeholder" type="tel" name="phone-number" id="phone-number" placeholder="+7 (___) ___-__-__" required>
+              <input class="userName contains-placeholder" type="text" name="username" id="username"
+                placeholder="Кирилл Иванов" required>
+              <input class="userTel contains-placeholder" type="tel" name="phone-number" id="phone-number"
+                placeholder="+7 (___) ___-__-__" required>
             </div>
 
             <div class="userData">
@@ -445,7 +564,8 @@
               <div class="agreements-wrapper">
                 <input class="agreements-checkbox" type="checkbox" name="agreements" id="agreements" checked required>
                 <label class="agreements-label" for="agreements">Принимаю условия <a class="agreements-link"
-                    href="#">пользовательского&nbsp;соглашения</a> и <a class="agreements-link" href="#">политики&nbsp;конфиденциальности</a></label>
+                    href="#">пользовательского&nbsp;соглашения</a> и <a class="agreements-link"
+                    href="#">политики&nbsp;конфиденциальности</a></label>
               </div>
 
               <button class="submit btn-reset" type="submit"><span class="submit-span">Начать проект</span></button>
@@ -456,7 +576,7 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
   <script src="./js/script.js"></script>
 </body>
