@@ -9,6 +9,8 @@
   flex-direction: column;
   max-width: 976px;
   flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .userContacts {

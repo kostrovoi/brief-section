@@ -1,107 +1,69 @@
-let cardsAllSteps = document.querySelectorAll('.brief-list__item');
-let stepList = Array.from(document.querySelectorAll('.stepList'));
-let form = document.querySelector('.form');
-let navItems = document.querySelectorAll('.navItem');
-let navItemChecked = document.querySelectorAll('svg.navItemChecked');
-let stepsCount = document.querySelectorAll('.stepsCount');
-let progress = document.querySelector('.progress');
+const stepList = Array.from(document.querySelectorAll('.stepList'));
+const navItems = Array.from(document.querySelectorAll('.navItem'));
+const navUl = document.querySelector('.nav-list');
+const stepsCount = document.querySelectorAll('.stepsCount');
+const navItemChecked = document.querySelectorAll('svg.navItemChecked');
+const progress = document.querySelector('.progress');
 
-console.dir(cardsAllSteps);
-console.dir(stepList);
-console.dir(form);
-console.dir(navItems);
-console.dir(navItemChecked);
-console.dir(stepsCount);
+let currentIndx = 0;
+let currentUl;
+let currentNavItem;
 
 let step = 1;
 stepsCount.forEach((count) => (count.innerHTML = step));
 
-
-stepList.forEach((stepWrapper) => (stepWrapper.style.display = 'none'));
+stepList.forEach((list) => (list.style.display = 'none'));
 stepList[0].style.display = '';
 
-let firstList = Array.from(stepList[0].children);
-let secondList = Array.from(stepList[1].children);
-let thirdList = Array.from(stepList[2].children);
-let fourthList = Array.from(stepList[3].children);
-let fifthList = Array.from(stepList[4].children);
+document.addEventListener('click', function (event) {
+  currentUl = event.target.closest('ul.stepList');
 
-console.log(firstList);
-console.log(stepList[0]);
+  if (currentUl == null) return;
+  console.log(Number(currentUl.dataset.index));
+  currentIndx = Number(currentUl.dataset.index);
+  stepList[currentIndx].style.display = 'none';
+  stepList[currentIndx].nextElementSibling.style.display = '';
 
-// firstList.forEach((card) => {
-//   card.addEventListener('click', () => {
-//     step++;
-//     stepsCount.forEach((count) => (count.innerHTML = step));
-//     progress.style.width = `${(100 * step) / 5}%`;
-//     console.log(progress.style.width);
+  navItems[currentIndx].classList.add('stepBack');
+  navItemChecked[currentIndx].classList.add('checked-visible');
 
-//     stepList[0].style.display = 'none';
-//     stepList[1].style.display = '';
-//     navItems[0].classList.add('stepBack');
-//     navItems[1].classList.add('subtitle--active');
-//     navItemChecked[0].classList.add('checked-visible');
-//   });
-// });
+  currentIndx++;
+  navItems[currentIndx].classList.add('subtitle--active');
+  stepsCount.forEach((count) => (count.innerHTML = currentIndx + 1));
+  progress.style.width = `${(100 * (currentIndx + 1)) / 5}%`;
+  console.log(progress.style.width);
 
-let indexStepList = 0;
-let indexNavItem = 0;
-
-stepList.forEach(list => {
-  if (list.classList.contains('.stepForward')) {
-    indexStepList = valueOf(indexOf(list));
-    console.log(valueOf(indexOf(list)))
-  } else indexStepList = 0;
+  currentIndx--;
+  if (navItems[currentIndx].previousElementSibling == null) {
+    return;
+  } else {
+    navItems[currentIndx].previousElementSibling.classList.remove('stepBack');
+  }
 });
 
-Array.from(stepList[indexStepList].children).forEach((card) => {
-  card.addEventListener('click', () => {
-    step++;
-    // if (step  === (stepList.length - 1)) {do step over, do not stepList[indexStepList + 1] }
+navUl.addEventListener('click', function (event) {
+  currentNavItem = event.target.closest('li.navItem');
 
-    stepsCount.forEach((count) => (count.innerHTML = step));
-    progress.style.width = `${(100 * step) / 5}%`;
+  if (currentNavItem.classList.contains('stepBack')) {
+    let currentNavIndex = navItems.indexOf(currentNavItem);
+    console.log('stepBack', currentNavIndex);
+
+    currentNavIndex++;
+    stepList[currentNavIndex].style.display = 'none';
+    stepList[currentNavIndex].previousElementSibling.style.display = '';
+    navItems[currentNavIndex].classList.remove('subtitle--active');
+
+    stepsCount.forEach((count) => (count.innerHTML = currentNavIndex));
+    progress.style.width = `${(100 * currentNavIndex) / 5}%`;
     console.log(progress.style.width);
 
-    stepList[indexStepList].style.display = 'none';
-    indexStepList++;
-    // console.log('I need a new one indexStepList', indexStepList);
+    currentNavIndex--;
+    navItemChecked[currentNavIndex].classList.remove('checked-visible');
+    navItems[currentNavIndex].classList.remove('stepBack');
 
-    stepList[indexStepList].style.display = '';
-    stepList[indexStepList].classList.add('stepForward');
-
-    console.log(indexStepList + 1 === stepList.length - 1); // last step
-
-    navItems[indexNavItem].classList.add('stepBack');
-    navItemChecked[indexNavItem].classList.add('checked-visible');
-    indexNavItem++;
-    navItems[indexNavItem].classList.add('subtitle--active');
-
-    console.log(indexStepList);
-  });
-});
-
-console.log('I need a new one indexStepList', indexStepList);
-
-navItems.forEach((navItem) => {
-  navItem.addEventListener('click', () => {
-    if (navItem.classList.contains('stepBack')) {
-      step--;
-      stepsCount.forEach((count) => (count.innerHTML = step));
-      progress.style.width = `${(100 * step) / 5}%`;
-
-      console.log(progress.style.width);
-
-      stepList[indexStepList].style.display = 'none';
-      stepList[indexStepList].classList.remove('stepForward');
-      indexStepList--;
-      stepList[indexStepList].style.display = '';
-      navItems[indexNavItem].classList.remove('subtitle--active');
-      indexNavItem--;
-      navItems[indexNavItem].classList.remove('stepBack');
-      navItemChecked[indexNavItem].classList.remove('checked-visible');
-
-      console.log(indexStepList, indexNavItem);
-    } else navItem;
-  });
+    if (navItems[currentNavIndex].previousElementSibling == null) return;
+    navItems[currentNavIndex].previousElementSibling.classList.add('stepBack');
+  } else {
+    return console.log('non-active-link');
+  }
 });
