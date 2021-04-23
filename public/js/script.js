@@ -44,6 +44,7 @@ document.addEventListener('click', function (event) {
 
 navUl.addEventListener('click', function (event) {
   currentNavItem = event.target.closest('li.navItem');
+  if (currentNavItem == null) return;
 
   if (currentNavItem.classList.contains('stepBack')) {
     let currentNavIndex = navItems.indexOf(currentNavItem);
