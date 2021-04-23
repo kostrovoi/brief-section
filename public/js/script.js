@@ -16,9 +16,10 @@ stepList.forEach((list) => (list.style.display = 'none'));
 stepList[0].style.display = '';
 
 document.addEventListener('click', function (event) {
-  currentUl = event.target.closest('ul.stepList');
+  currentLi = event.target.closest('li.brief-list__item');
 
-  if (currentUl == null) return;
+  if (currentLi == null) return;
+  currentUl = currentLi.parentNode;
   console.log(Number(currentUl.dataset.index));
   currentIndx = Number(currentUl.dataset.index);
   stepList[currentIndx].style.display = 'none';
