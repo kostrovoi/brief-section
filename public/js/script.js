@@ -4,10 +4,23 @@ const navUl = document.querySelector('.nav-list');
 const stepsCount = document.querySelectorAll('.stepsCount');
 const navItemChecked = document.querySelectorAll('svg.navItemChecked');
 const progress = document.querySelector('.progress');
+const submit = document.querySelector('button.submit');
+// const username = document.getElementById('username');
+// const phoneNumber = document.getElementById('phone-number');
+const form = document.forms.form;
 
+let username = form.elements.username;
+let phoneNumber = form.elements.phoneNumber;
 let currentIndx = 0;
 let currentUl;
 let currentNavItem;
+let orderHistory = [];
+let order = [];
+let choice = {};
+
+function createObject(key, value) {
+  choice[key] = value;
+}
 
 let step = 1;
 stepsCount.forEach((count) => (count.innerHTML = step));
@@ -33,6 +46,29 @@ document.addEventListener('click', function (event) {
   stepsCount.forEach((count) => (count.innerHTML = currentIndx + 1));
   progress.style.width = `${(100 * (currentIndx + 1)) / 5}%`;
   console.log(progress.style.width);
+
+  console.log(currentIndx);
+  let choiceValue = currentLi.getAttribute('data-type');
+  let choiceKey = `step${currentIndx}`;
+  // let choice = {};
+  // choice[choiceKey] = choiceValue;
+
+createObject(choiceKey, choiceValue);
+console.log(choice);
+
+// console.log(Object.keys(choice));
+// console.log(choice[choiceKey]);
+
+  orderHistory.push(choice);
+  console.log(orderHistory);
+
+  order.push(choice);
+  console.log(order);
+  // delete objectName.keyName
+
+  // localStorage.setItem('order', JSON.stringify(order));
+  // const url = window.location.replace('http://127.0.0.1:5500/public/', 'order.html');
+  // window.location.href = url;
 
   currentIndx--;
   if (navItems[currentIndx].previousElementSibling == null) {
@@ -63,9 +99,51 @@ navUl.addEventListener('click', function (event) {
     navItemChecked[currentNavIndex].classList.remove('checked-visible');
     navItems[currentNavIndex].classList.remove('stepBack');
 
+  // function deleteLastObj() {
+  // order.pop();
+  // }
+  // deleteLastObj();
+  console.log(order[currentNavIndex]);
+  console.log(currentNavIndex);
+  // let popped = order.pop();
+  order.pop();
+  // console.log(popped);
+  console.log(order);
+
     if (navItems[currentNavIndex].previousElementSibling == null) return;
     navItems[currentNavIndex].previousElementSibling.classList.add('stepBack');
   } else {
     return console.log('non-active-link');
   }
+});
+
+submit.addEventListener('click', function(e) {
+  const button = e.currentTarget;
+
+  localStorage.setItem('order', JSON.stringify(order));
+  localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+
+  // if (username == null || phoneNumber == null) return;
+  console.log(localStorage.getItem('order'));
+  // , JSON.parse(order)
+  console.log(localStorage.getItem('orderHistory'));
+  // , JSON.parse(orderHistory)
+});
+
+username.addEventListener('change', function () {
+  console.log(username.value);
+  let usernameKey = 'username';
+  let usernameValue = username.value;
+  createObject(usernameKey, usernameValue);
+  orderHistory.push(choice);
+  order.push(choice);
+});
+
+phoneNumber.addEventListener('change', function () {
+  console.log(phoneNumber.value);
+  let phoneNumberKey = 'phoneNumber';
+  let phoneNumberValue = phoneNumber.value;
+  createObject(phoneNumberKey, phoneNumberValue);
+  orderHistory.push(choice);
+  order.push(choice);
 });
