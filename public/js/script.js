@@ -5,8 +5,6 @@ const stepsCount = document.querySelectorAll('.stepsCount');
 const navItemChecked = document.querySelectorAll('svg.navItemChecked');
 const progress = document.querySelector('.progress');
 const submit = document.querySelector('button.submit');
-// const username = document.getElementById('username');
-// const phoneNumber = document.getElementById('phone-number');
 const form = document.forms.form;
 
 let username = form.elements.username;
@@ -66,10 +64,6 @@ console.log(choice);
   console.log(order);
   // delete objectName.keyName
 
-  // localStorage.setItem('order', JSON.stringify(order));
-  // const url = window.location.replace('http://127.0.0.1:5500/public/', 'order.html');
-  // window.location.href = url;
-
   currentIndx--;
   if (navItems[currentIndx].previousElementSibling == null) {
     return;
@@ -123,7 +117,6 @@ submit.addEventListener('click', function(e) {
   localStorage.setItem('order', JSON.stringify(order));
   localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
 
-  // if (username == null || phoneNumber == null) return;
   console.log(localStorage.getItem('order'));
   // , JSON.parse(order)
   console.log(localStorage.getItem('orderHistory'));
